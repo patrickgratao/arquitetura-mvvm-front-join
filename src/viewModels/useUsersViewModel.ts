@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { User } from "../models/User";
 import ApiService from "../services/ApiService";
 
@@ -6,7 +6,7 @@ export const useUsersViewModel = () => {
   const [usersList, setUsersList] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const service = new ApiService();
+  const service = useMemo(() => new ApiService(), []);
 
   // Buscar a lista de usuários
   const getUsersList = useCallback(async () => {
@@ -16,7 +16,7 @@ export const useUsersViewModel = () => {
       setUsersList(response)
     }
     setLoading(false)
-  }, [])
+  }, [service])
 
   return { usersList, loading, getUsersList }
 }

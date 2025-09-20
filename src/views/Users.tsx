@@ -6,7 +6,7 @@ export const UsersView = () => {
 
   useEffect(() => {
     getUsersList();
-  }, [])
+  }, [getUsersList])
 
   if (loading) {
     return (
