@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import type { User } from "../models/User";
-import ApiService from "../services/apiService";
+import ApiService from "../services/ApiService";
 
 export const useUsersViewModel = () => {
   const [usersList, setUsersList] = useState<User[]>([]);
@@ -11,9 +11,9 @@ export const useUsersViewModel = () => {
   // Buscar a lista de usuários
   const getUsersList = useCallback(async () => {
     setLoading(true)
-    const response = await service.get("https://jsonplaceholder.typicode.com/users")
+    const response = await service.get("/users")
     if (response) {
-      setUsersList(response);
+      setUsersList(response)
     }
     setLoading(false)
   }, [])
