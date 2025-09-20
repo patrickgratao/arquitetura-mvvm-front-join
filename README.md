@@ -32,7 +32,7 @@ Ele facilita a manutenção, testes e escalabilidade do projeto, organizando mel
 
 # Tecnologias utilizadas
 
-- React 19, Vite, Typescript, React Router Dom v6;
+- React 19, Vite, Typescript;
 - Tailwind CSS 3.
 
 # Como instalar?
