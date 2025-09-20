@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Components */
+@layer components {
+  .app-container {
+    @apply bg-gray-900 min-h-screen;
+  }
+
+  .users-container {
+    @apply p-6 bg-gray-900 min-h-screen;
+  }
+
+  .users-title {
+    @apply text-2xl font-bold text-white mb-4;
+  }
+
+  .users-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+  }
+
+  .user-card {
+    @apply bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700 hover:bg-gray-600 transition-colors;
+  }
+
+  .user-name {
+    @apply text-lg font-semibold text-white;
+  }
+
+  .user-email {
+    @apply text-gray-300;
+  }
+
+  .loading-container {
+    @apply flex justify-center items-center p-8;
+  }
+
+  .loading-text {
+    @apply text-lg text-gray-300;
+  }
+
+  .error-container {
+    @apply flex justify-center items-center p-8;
+  }
+
+  .error-text {
+    @apply text-lg text-red-400;
+  }
+}

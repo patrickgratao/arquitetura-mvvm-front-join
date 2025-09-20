@@ -1,9 +1,9 @@
+import { UsersList } from './Users';
 
 export default function App() {
-
   return (
-    <div>
-      <p>minha view</p>
+    <div className="app-container">
+      <UsersList />
     </div>
   );
 }
