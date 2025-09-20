@@ -9,7 +9,6 @@ export interface User {
 export const UsersList = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const getUsers = async (): Promise<User[]> => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -24,7 +23,7 @@ export const UsersList = () => {
         const usersData = await getUsers();
         setUsers(usersData);
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Erro desconhecido');
+        console.log("Erro ao buscar usuários");
       } finally {
         setLoading(false);
       }
@@ -37,14 +36,6 @@ export const UsersList = () => {
     return (
       <div className="loading-container">
         <div className="loading-text">Carregando usuários...</div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="error-container">
-        <div className="error-text">Erro: {error}</div>
       </div>
     );
   }
