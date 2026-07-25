@@ -1,9 +1,3 @@
-<h1 align="center" style="background-color: #121a2d">
-    <br />
-      <img alt="big brain" src="https://www.joincommunity.com.br/images/logo-join-white.png" width="200px" />
-    <br /><br />
-</h1>
-
 <h1 align="center">
     Arquitetura MVVM na Prática - Join Community
 </h1>
